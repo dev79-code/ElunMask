@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>$ELUN — THE SAVIOR OF THE TRENCHES IS LIVE</title>
+<meta name="description" content="$ELUN is live. The savior of the trenches. Starlink. X. Doge. The man bought twitter so we could shitpost freely. Send it." />
+<meta property="og:title" content="$ELUN — Savior of the Trenches" />
+<meta property="og:description" content="The man literally bought twitter so we could shitpost freely. it only makes sense we run $ELUN up." />
+<meta property="og:image" content="elun-logo.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="elun-logo.jpg" />
+<link rel="icon" type="image/jpeg" href="elun-logo.jpg" />
+<link rel="apple-touch-icon" href="elun-logo.jpg" />
+<link rel="shortcut icon" href="elun-logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Space+Mono:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#fff5d1;
+    --hot:#ff2a2a;
+    --x:#1d9bf0;
+    --green:#00ff88;
+    --gold:#ffd400;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden}
+  body{
+    font-family:'Space Mono',monospace;
+    background:var(--paper);
+    color:var(--ink);
+    cursor:crosshair;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(255,42,42,.15) 0, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(29,155,240,.15) 0, transparent 40%);
+  }
+  a{color:inherit}
+  .scanlines::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
+    background:repeating-linear-gradient(180deg,rgba(0,0,0,.06) 0 1px,transparent 1px 3px);
+    mix-blend-mode:multiply;
+  }
+
+  /* ============ MARQUEE TOP ============ */
+  .ticker{
+    background:var(--ink);color:var(--gold);
+    border-bottom:4px solid var(--hot);
+    overflow:hidden;white-space:nowrap;
+    font-family:'Bungee',cursive;font-size:18px;
+    padding:10px 0;
+  }
+  .ticker-track{display:inline-block;animation:scroll 22s linear infinite}
+  .ticker span{margin:0 30px}
+  .ticker .red{color:var(--hot)}
+  .ticker .green{color:var(--green)}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============ NAV ============ */
+  nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 28px;border-bottom:3px dashed var(--ink);
+    background:var(--paper);position:sticky;top:0;z-index:50;
+  }
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Bungee Shade',cursive;font-size:34px;letter-spacing:1px;color:var(--hot);text-shadow:3px 3px 0 var(--ink)}
+  .brand .dollar{color:var(--green)}
+  .brand img{
+    width:54px;height:54px;border-radius:50%;
+    border:3px solid var(--ink);background:#fff;
+    box-shadow:3px 3px 0 var(--hot);
+    object-fit:cover;
+  }
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap}
+  .nav-links a{
+    font-family:'Bungee',cursive;font-size:14px;
+    text-decoration:none;padding:8px 12px;border:2px solid var(--ink);
+    background:#fff;transition:all .12s;
+  }
+  .nav-links a:hover{background:var(--gold);transform:rotate(-2deg) translateY(-2px)}
+  .x-cta{
+    background:var(--ink) !important;color:#fff !important;
+    box-shadow:4px 4px 0 var(--hot);
+  }
+  .x-cta:hover{background:var(--x) !important;color:var(--ink) !important}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;padding:60px 28px 80px;text-align:center;
+    border-bottom:6px solid var(--ink);
+  }
+  .hero h1{
+    font-family:'Bungee Shade',cursive;
+    font-size:clamp(48px,11vw,160px);
+    line-height:.9;color:var(--hot);
+    text-shadow:6px 6px 0 var(--ink),12px 12px 0 var(--gold);
+    letter-spacing:-2px;
+    transform:rotate(-2deg);
+    margin-bottom:30px;
+  }
+  .hero h1 .live{
+    display:inline-block;color:var(--green);
+    text-shadow:6px 6px 0 var(--ink);
+    animation:wiggle 1.4s ease-in-out infinite;
+  }
+  @keyframes wiggle{
+    0%,100%{transform:rotate(-3deg) scale(1)}
+    50%{transform:rotate(3deg) scale(1.05)}
+  }
+  .hero-sub{
+    font-family:'Bungee',cursive;font-size:clamp(18px,2.2vw,28px);
+    max-width:880px;margin:0 auto 40px;
+    color:var(--ink);
+  }
+  .hero-sub .x-blue{color:var(--x)}
+  .hero-sub .red{color:var(--hot)}
+
+  .hero-imgs{
+    display:flex;justify-content:center;gap:24px;flex-wrap:wrap;
+    margin:40px auto;align-items:flex-end;
+  }
+  .hero-imgs .frame{
+    border:5px solid var(--ink);background:#fff;padding:8px;
+    box-shadow:10px 10px 0 var(--hot);
+    transition:transform .2s;
+  }
+  .hero-imgs .frame:hover{transform:rotate(-3deg) scale(1.04)}
+  .hero-imgs .frame.big{transform:rotate(2deg)}
+  .hero-imgs .frame.big:hover{transform:rotate(-1deg) scale(1.04)}
+  .hero-imgs img{display:block;max-width:420px;width:90vw;height:auto}
+  .hero-imgs .cap{
+    font-family:'Bungee',cursive;text-align:center;margin-top:6px;
+    font-size:14px;letter-spacing:1px;
+  }
+
+  .cta-row{
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    margin:30px 0 10px;
+  }
+  .btn{
+    font-family:'Bungee',cursive;font-size:22px;
+    padding:18px 30px;text-decoration:none;
+    border:4px solid var(--ink);background:var(--gold);color:var(--ink);
+    box-shadow:8px 8px 0 var(--ink);
+    transition:all .12s;display:inline-flex;align-items:center;gap:10px;
+  }
+  .btn:hover{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--ink)}
+  .btn.hot{background:var(--hot);color:#fff}
+  .btn.x{background:var(--ink);color:#fff;box-shadow:8px 8px 0 var(--x)}
+  .btn.x:hover{box-shadow:4px 4px 0 var(--x)}
+
+  .ca-box{
+    margin:30px auto 0;max-width:760px;
+    border:4px dashed var(--ink);background:#fff;
+    padding:14px 18px;font-family:'Space Mono',monospace;
+    display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  }
+  .ca-box b{font-family:'Bungee',cursive;color:var(--hot);letter-spacing:1px}
+  .ca-box code{background:var(--ink);color:var(--green);padding:6px 10px;font-size:14px;word-break:break-all}
+  .ca-box button{
+    font-family:'Bungee',cursive;font-size:14px;
+    background:var(--gold);border:3px solid var(--ink);padding:8px 14px;
+    cursor:pointer;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{padding:80px 28px;border-bottom:6px solid var(--ink);position:relative}
+  .section-title{
+    font-family:'Bungee Shade',cursive;
+    font-size:clamp(40px,7vw,90px);
+    color:var(--ink);text-align:center;
+    margin-bottom:50px;letter-spacing:-1px;
+  }
+  .section-title em{color:var(--hot);font-style:normal}
+  .section-title b{color:var(--x)}
+
+  /* WHY */
+  .why{background:var(--gold)}
+  .why-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;max-width:1200px;margin:0 auto;
+  }
+  .why-card{
+    background:#fff;border:4px solid var(--ink);
+    padding:24px;box-shadow:8px 8px 0 var(--hot);
+    transition:transform .15s;
+  }
+  .why-card:nth-child(2n){box-shadow:8px 8px 0 var(--x);transform:rotate(-1deg)}
+  .why-card:nth-child(3n){box-shadow:8px 8px 0 var(--green);transform:rotate(1.5deg)}
+  .why-card:hover{transform:translate(-4px,-4px) rotate(0deg)}
+  .why-card h3{
+    font-family:'Bungee',cursive;font-size:24px;color:var(--hot);
+    margin-bottom:10px;
+  }
+  .why-card p{font-size:16px;line-height:1.55}
+
+  /* BIG QUOTE */
+  .quote{
+    background:var(--ink);color:var(--paper);
+    text-align:center;padding:100px 28px;
+  }
+  .quote q{
+    font-family:'Bungee Shade',cursive;
+    font-size:clamp(36px,6vw,80px);line-height:1;
+    display:block;max-width:1100px;margin:0 auto;
+    text-shadow:6px 6px 0 var(--hot);
+  }
+  .quote q .glow{color:var(--green)}
+  .quote .by{
+    margin-top:30px;font-family:'Bungee',cursive;
+    color:var(--gold);font-size:18px;letter-spacing:2px;
+  }
+
+  /* TOKENOMICS */
+  .tokenomics{background:var(--paper)}
+  .pie-wrap{
+    display:flex;justify-content:center;align-items:center;gap:60px;
+    flex-wrap:wrap;max-width:1200px;margin:0 auto;
+  }
+  .pie{
+    width:340px;height:340px;border-radius:50%;
+    border:6px solid var(--ink);
+    background:conic-gradient(var(--hot) 0 70%, var(--gold) 70% 90%, var(--green) 90% 100%);
+    box-shadow:14px 14px 0 var(--ink);
+    position:relative;animation:spin 30s linear infinite;
+  }
+  .pie::after{
+    content:"100%";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:'Bungee Shade',cursive;font-size:54px;color:var(--ink);
+    background:#fff;width:120px;height:120px;border-radius:50%;
+    margin:auto;border:5px solid var(--ink);
+  }
+  @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+  .legend{font-family:'Bungee',cursive;font-size:22px;line-height:2.2}
+  .legend .dot{display:inline-block;width:24px;height:24px;border:3px solid var(--ink);margin-right:10px;vertical-align:middle}
+  .dot.red{background:var(--hot)}
+  .dot.gold{background:var(--gold)}
+  .dot.green{background:var(--green)}
+  .legend small{font-family:'Space Mono',monospace;display:block;font-size:13px;color:#555;margin-left:34px;text-transform:none}
+
+  /* ROADMAP */
+  .roadmap{background:#fff}
+  .road-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;max-width:1200px;margin:0 auto;
+  }
+  .phase{
+    border:5px solid var(--ink);padding:24px;background:var(--paper);
+    box-shadow:10px 10px 0 var(--ink);
+  }
+  .phase:nth-child(1){background:#ffd6d6}
+  .phase:nth-child(2){background:#d6f0ff}
+  .phase:nth-child(3){background:#d6ffd9}
+  .phase:nth-child(4){background:#ffe9b0}
+  .phase h4{
+    font-family:'Bungee',cursive;font-size:22px;color:var(--ink);
+    margin-bottom:14px;
+  }
+  .phase ul{list-style:none}
+  .phase li{padding:6px 0;font-size:15px;display:flex;gap:8px;align-items:flex-start}
+  .phase li::before{content:"▸";color:var(--hot);font-weight:bold}
+
+  /* HOW TO BUY */
+  .htb{background:var(--green);color:var(--ink)}
+  .htb .steps{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;max-width:1200px;margin:0 auto;
+  }
+  .step{
+    background:#fff;border:5px solid var(--ink);
+    padding:24px;box-shadow:10px 10px 0 var(--ink);
+    position:relative;
+  }
+  .step .num{
+    position:absolute;top:-26px;left:-26px;
+    width:60px;height:60px;border-radius:50%;
+    background:var(--hot);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Bungee Shade',cursive;font-size:30px;
+    border:5px solid var(--ink);
+  }
+  .step h5{font-family:'Bungee',cursive;font-size:20px;margin:8px 0 10px}
+  .step p{font-size:15px;line-height:1.5}
+
+  /* MEME / DUO */
+  .duo{background:var(--ink);color:var(--paper);text-align:center}
+  .duo .section-title{color:#fff}
+  .duo .section-title em{color:var(--gold)}
+  .duo-img{
+    display:inline-block;border:6px solid var(--paper);
+    box-shadow:14px 14px 0 var(--hot);
+    max-width:90vw;
+  }
+  .duo-img img{display:block;max-width:900px;width:100%;height:auto}
+  .duo p.kicker{
+    font-family:'Bungee',cursive;font-size:22px;margin-top:30px;color:var(--gold);
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--hot);color:#fff;padding:60px 28px;text-align:center;
+  }
+  footer h2{
+    font-family:'Bungee Shade',cursive;font-size:clamp(40px,8vw,90px);
+    text-shadow:6px 6px 0 var(--ink);margin-bottom:20px;
+  }
+  footer .links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:24px 0}
+  footer .links a{
+    font-family:'Bungee',cursive;text-decoration:none;
+    background:var(--ink);color:#fff;padding:14px 22px;border:4px solid #fff;
+    box-shadow:6px 6px 0 var(--gold);
+  }
+  footer .disclaimer{
+    margin-top:30px;font-family:'Space Mono',monospace;font-size:12px;
+    max-width:760px;margin-left:auto;margin-right:auto;line-height:1.6;
+    background:rgba(0,0,0,.25);padding:14px;border:2px dashed #fff;
+  }
+
+  /* FLOATING ELON */
+  .floater{
+    position:fixed;bottom:20px;right:20px;z-index:80;
+    background:var(--ink);color:var(--gold);
+    border:4px solid var(--gold);padding:12px 18px;
+    font-family:'Bungee',cursive;font-size:14px;
+    text-decoration:none;
+    animation:bob 1.6s ease-in-out infinite;
+    box-shadow:6px 6px 0 var(--hot);
+  }
+  .floater:hover{background:var(--x);color:#fff}
+  @keyframes bob{
+    0%,100%{transform:translateY(0) rotate(-2deg)}
+    50%{transform:translateY(-8px) rotate(2deg)}
+  }
+
+  /* shake */
+  .shake{display:inline-block;animation:shake .35s infinite}
+  @keyframes shake{
+    0%{transform:translate(0,0)}
+    25%{transform:translate(-1px,1px)}
+    50%{transform:translate(1px,-1px)}
+    75%{transform:translate(-1px,-1px)}
+    100%{transform:translate(0,0)}
+  }
+
+  /* mobile */
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .pie{width:240px;height:240px}
+    .pie::after{width:90px;height:90px;font-size:34px}
+  }
+</style>
+</head>
+<body class="scanlines">
+
+<!-- TOP TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="red">★ $ELUN IS LIVE ★</span>
+    <span>SAVIOR OF THE TRENCHES</span>
+    <span class="green">▲ +∞%</span>
+    <span>HE WILL REPLY</span>
+    <span class="red">★ SEND IT ★</span>
+    <span>STARLINK / X / DOGE</span>
+    <span class="green">▲ NEW ATH SOON</span>
+    <span>HE BOUGHT TWITTER FOR US</span>
+    <span class="red">★ $ELUN IS LIVE ★</span>
+    <span>SAVIOR OF THE TRENCHES</span>
+    <span class="green">▲ +∞%</span>
+    <span>HE WILL REPLY</span>
+    <span class="red">★ SEND IT ★</span>
+    <span>STARLINK / X / DOGE</span>
+    <span class="green">▲ NEW ATH SOON</span>
+    <span>HE BOUGHT TWITTER FOR US</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="brand"><img src="elun-logo.jpg" alt="$ELUN" /><span><span class="dollar">$</span>ELUN</span></div>
+  <div class="nav-links">
+    <a href="#why">WHY</a>
+    <a href="#tokenomics">TOKENOMICS</a>
+    <a href="#roadmap">ROADMAP</a>
+    <a href="#htb">HOW TO BUY</a>
+    <a href="https://x.com/ElunMaskSOL" target="_blank" rel="noopener" class="x-cta">FOLLOW ON X →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <h1>$ELUN IS <span class="live">LIVE</span></h1>
+  <p class="hero-sub">
+    the savior of the <span class="red">trenches</span> has arrived.<br/>
+    starlink. <span class="x-blue">x</span>. doge. the man literally bought twitter so we could shitpost freely.<br/>
+    <b>it only makes sense we run $ELUN up.</b>
+  </p>
+
+  <div class="hero-imgs">
+    <div class="frame">
+      <img src="elun-elon.jpg" alt="elon character" />
+      <div class="cap">CHAIRMAN OF THE TRENCHES</div>
+    </div>
+    <div class="frame big">
+      <img src="elun-sam.jpg" alt="sam character" />
+      <div class="cap">CLOSED SOURCE COPER</div>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="https://x.com/ElunMaskSOL" target="_blank" rel="noopener" class="btn x">FOLLOW @ElunMaskSOL →</a>
+    <a href="#htb" class="btn hot">BUY $ELUN NOW</a>
+    <a href="#why" class="btn">WHY $ELUN ?</a>
+  </div>
+
+  <div class="ca-box">
+    <div><b>CA:</b> <code id="ca">COMING SOON — drop in TG</code></div>
+    <button onclick="copyCA()">COPY</button>
+  </div>
+</header>
+
+<!-- WHY -->
+<section id="why" class="why">
+  <h2 class="section-title">WHY <em>$ELUN</em> ?</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>HE BOUGHT TWITTER</h3>
+      <p>So we could shitpost freely. So we could ratio anyone. So we could call it X and pretend it isn't twitter. The single greatest gift to degens in human history. Show some respect.</p>
+    </div>
+    <div class="why-card">
+      <h3>STARLINK</h3>
+      <p>You're trading meme coins from a tent in the woods at 2am. You're welcome. The man bolted internet to the sky for you. Min size on the next pump goes to him.</p>
+    </div>
+    <div class="why-card">
+      <h3>DOGE</h3>
+      <p>Single tweet → 7000% candle. No other human has that range. Behind every great memecoin is one unhinged genius typing in all caps.</p>
+    </div>
+    <div class="why-card">
+      <h3>HE WILL REPLY</h3>
+      <p>If we cook this right, he replies. simple as. The strategy is to make $ELUN so loud, so unignorable, that the algo serves it on his FYP whether he likes it or not.</p>
+    </div>
+    <div class="why-card">
+      <h3>FAIR LAUNCH</h3>
+      <p>No presale. No team allocation. No VC silently dumping on your head. Just one ticker, one mission, and a chart that only knows one direction. (the green one.)</p>
+    </div>
+    <div class="why-card">
+      <h3>SAVIOR ENERGY</h3>
+      <p>Other coins have charts. $ELUN has <b>a movement</b>. The trenches need a leader. The leader needs an L1 representation. We are that representation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BIG QUOTE -->
+<section class="quote">
+  <q>"<span class="glow">THE SAVIOR</span> OF THE TRENCHES.<br/>LET'S SEND."</q>
+  <div class="by">— ANCIENT TRENCH PROVERB, c. 2026</div>
+</section>
+
+<!-- TOKENOMICS -->
+<section id="tokenomics" class="tokenomics">
+  <h2 class="section-title">TOKEN<b>OMICS</b></h2>
+  <div class="pie-wrap">
+    <div class="pie" aria-hidden="true"></div>
+    <div class="legend">
+      <div><span class="dot red"></span>70% LIQUIDITY <small>burned. gone. forever.</small></div>
+      <div><span class="dot gold"></span>20% TRENCHES <small>airdrop to certified glazers</small></div>
+      <div><span class="dot green"></span>10% MARKETING <small>1 (one) billboard outside HQ</small></div>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:50px;font-family:'Bungee',cursive;font-size:20px">
+    SUPPLY: <span class="shake" style="color:var(--hot)">1,000,000,000</span> $ELUN — TAX 0/0 — LP BURNED
+  </p>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="roadmap">
+  <h2 class="section-title">THE <em>ROADMAP</em></h2>
+  <div class="road-grid">
+    <div class="phase">
+      <h4>PHASE 1 — SEND</h4>
+      <ul>
+        <li>Launch on SOL</li>
+        <li>Burn LP, renounce, gigachad it</li>
+        <li>1000 holders by EOD</li>
+        <li>Trend on X (cope)</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <h4>PHASE 2 — RATIO</h4>
+      <ul>
+        <li>Reply guy army deployed</li>
+        <li>Every Elon tweet → $ELUN reply</li>
+        <li>10k holders</li>
+        <li>First CEX whisper</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <h4>PHASE 3 — REPLY</h4>
+      <ul>
+        <li>HE notices.</li>
+        <li>HE smirks.</li>
+        <li>HE types "interesting"</li>
+        <li>chart goes vertical</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <h4>PHASE 4 — MARS</h4>
+      <ul>
+        <li>$ELUN payments on X</li>
+        <li>Starlink airdrop</li>
+        <li>Doge merger (jk… unless?)</li>
+        <li>1 $ELUN = 1 ROCKET</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DUO -->
+<section class="duo">
+  <h2 class="section-title">RED PILL <em>vs</em> BLUE PILL</h2>
+  <div class="duo-img">
+    <!-- composite using both images side-by-side -->
+    <div style="display:flex;background:#000">
+      <img src="elun-elon.jpg" alt="elon" style="width:50%;display:block" />
+      <img src="elun-sam.jpg" alt="sam" style="width:50%;display:block" />
+    </div>
+  </div>
+  <p class="kicker">ONE OF THESE MEN BUILT ROCKETS. THE OTHER ONE BUILT A CHATBOT. PICK A SIDE.</p>
+</section>
+
+<!-- HOW TO BUY -->
+<section id="htb" class="htb">
+  <h2 class="section-title">HOW TO <em>BUY</em></h2>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h5>GET A WALLET</h5>
+      <p>Download Phantom. Set it up. Don't lose your seed phrase or the trench will swallow you.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h5>FUND IT</h5>
+      <p>Send some $SOL from any CEX. Yes, even Coinbase, we don't judge. Much.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h5>SWAP TO $ELUN</h5>
+      <p>Open Jupiter or Raydium. Paste the CA. Set slippage to "yes". Click swap. Pray.</p>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <h5>GLAZE ON X</h5>
+      <p>Reply to every Elon tweet with $ELUN. Tag <a href="https://x.com/ElunMaskSOL" target="_blank" rel="noopener" style="text-decoration:underline">@ElunMaskSOL</a>. Become annoying. Become rich.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / FINAL CTA -->
+<footer>
+  <h2>SEND IT.</h2>
+  <p style="font-family:'Bungee',cursive;font-size:20px;max-width:760px;margin:0 auto">
+    if we cook this right, he replies. simple as.<br/>
+    the savior of the trenches. let's send.
+  </p>
+  <div class="links">
+    <a href="https://x.com/ElunMaskSOL" target="_blank" rel="noopener">𝕏 / @ElunMaskSOL</a>
+    <a href="#htb">BUY NOW</a>
+    <a href="#tokenomics">TOKENOMICS</a>
+    <a href="#roadmap">ROADMAP</a>
+  </div>
+  <div class="disclaimer">
+    $ELUN is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is purely for entertainment purposes and is in no way affiliated with, endorsed by, or sponsored by Elon Musk, X Corp, Tesla, SpaceX, or any of their respective entities. Trade responsibly. Memes are not financial advice.
+  </div>
+</footer>
+
+<a href="https://x.com/ElunMaskSOL" target="_blank" rel="noopener" class="floater">𝕏 FOLLOW @ElunMaskSOL</a>
+
+<script>
+  function copyCA(){
+    const ca = document.getElementById('ca').textContent.trim();
+    navigator.clipboard?.writeText(ca);
+    const btn = event.target;
+    const original = btn.textContent;
+    btn.textContent = 'COPIED!';
+    btn.style.background = '#00ff88';
+    setTimeout(() => { btn.textContent = original; btn.style.background = ''; }, 1200);
+  }
+
+  // konami-ish: any key press makes the title shake harder for a sec
+  document.addEventListener('keydown', () => {
+    document.body.style.animation = 'shake .15s 6';
+    setTimeout(() => document.body.style.animation = '', 1000);
+  });
+
+  // click anywhere → spawn floating $ELUN
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('a, button')) return;
+    const el = document.createElement('div');
+    el.textContent = '$ELUN';
+    el.style.cssText = `
+      position:fixed;left:${e.clientX}px;top:${e.clientY}px;
+      pointer-events:none;font-family:'Bungee Shade',cursive;
+      font-size:28px;color:#ff2a2a;text-shadow:2px 2px 0 #000;
+      z-index:9998;transition:all 1.2s ease-out;
+    `;
+    document.body.appendChild(el);
+    requestAnimationFrame(() => {
+      el.style.transform = `translate(${(Math.random()-.5)*200}px, -200px) rotate(${(Math.random()-.5)*60}deg)`;
+      el.style.opacity = '0';
+    });
+    setTimeout(() => el.remove(), 1300);
+  });
+</script>
+</body>
+</html>
